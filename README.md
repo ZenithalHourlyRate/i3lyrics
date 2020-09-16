@@ -2,6 +2,10 @@
 
 This repo is meant for those wanting lyrics shown in their i3bar. Currently only the lyrics of [netease-music](https://github.com/darknessomi/musicbox) can be shown in i3bar. More contribution can be made to make i3bar show more lyrics from more softwares.
 
+## Demo
+
+![Demo of i3lyrics with song playing and workspace button shown](demo.png)
+
 ## lyric.sh
 
 Based on the work of Michael Stapelberg. This script continuously reads the song name and current lyric and wrap them in a block of json and send it to stdout, which is read by i3bar.
