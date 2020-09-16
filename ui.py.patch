@@ -1,0 +1,27 @@
+--- ui.py	2020-09-16 20:42:22.701394950 +0800
++++ ui-lyrics.py	2020-09-16 20:40:56.992294965 +0800
+@@ -113,6 +113,12 @@
+             curses.color_pair(4),
+         )
+ 
++        with open("/tmp/netease-song","w") as f:
++            w = song_name + self.space + artist + "  < " + album_name + " >"
++            w = w.replace("\"","")
++            w = w.replace("\n","")
++            f.write(w)
++
+         self.screen.refresh()
+ 
+     def build_process_bar(
+@@ -207,6 +213,11 @@
+                 index += 1
+         self.now_lyric = re.sub("\[.*?\]", "", self.now_lyric)
+         self.post_lyric = re.sub("\[.*?\]", "", self.post_lyric)
++        with open("/tmp/netease-lyric","w") as f:
++            w = self.now_lyric+" ## "+self.post_lyric
++            w = w.replace("\"","")
++            w = w.replace("\n","")
++            f.write(w)
+         if dbus_activity and self.config.get("osdlyrics"):
+             try:
+                 bus = dbus.SessionBus().get_object("org.musicbox.Bus", "/")
