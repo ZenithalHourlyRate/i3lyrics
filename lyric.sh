@@ -28,6 +28,10 @@ do
     song=$(cat /tmp/netease-song)
     urgent=1
 
+    if [ "x$lyric" -eq "x" ] || [ "x$lyric" -eq "x暂无歌词 ~>_<~ " ]; then
+        urgent="0"
+    fi
+
     echo ",[{\"name\":\"lyric\",\"full_text\":\"$song ## $lyric\",\"align\":\"center\",\"urgent\":$urgent}]"
 	sleep 1
 done
