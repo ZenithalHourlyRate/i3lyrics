@@ -28,7 +28,7 @@ do
     song=$(cat /tmp/netease-song)
     urgent=1
 
-    if [ "x$lyric" -eq "x" ] || [ "x$lyric" -eq "x暂无歌词 ~>_<~ " ]; then
+    if [[ "x$lyric" == "x" ]] || [[ "x$lyric" == "x暂无歌词 ~>_<~ " ]]; then
         urgent="0"
     fi
 
