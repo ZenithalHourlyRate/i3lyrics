@@ -40,6 +40,6 @@ bar {
 
 You should add patches such that `/tmp/netease-song` and `/tmp/netease-lyric` can be generated when the song is being played.
 
-Currently `ui.py.patch` is against `d09e2f0` commit of [netease-music](https://github.com/darknessomi/musicbox). You can make your own changes in `ui.py` as long as the files needed are generated.
+Currently `ui.py.patch` is against version 0.3.1-2 (-2 added by archlinuxcn pkg) of [netease-music](https://github.com/darknessomi/musicbox). You can make your own changes in `ui.py` as long as the files needed are generated.
 
-One possible path of `ui.py` is `/usr/lib/python3.8/site-packages/NEMbox/ui.py`. Do the patch based on your own situation please.
+One possible path of `ui.py` is `/usr/lib/python3.9/site-packages/NEMbox/ui.py`. Do the patch based on your own situation please.
